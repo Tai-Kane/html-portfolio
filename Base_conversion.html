@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16進制卡號轉換</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+        .button-container img {
+            margin-left: 10px;
+            width: 80px; /* 調整圖片寬度 */
+            height: auto; /* 保持圖片比例 */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>16進制轉換10進制</h1>
+        <label for="hexNum">請輸入16進制卡號 (0必需輸入)：</label>
+        <input type="text" id="hexNum" placeholder="例如：04C70371" />
+
+        <button onclick="processHex()">轉換</button>
+        <div class="result" id="result"></div> <br />
+        <!-- 顯示結果 -->
+
+        <label for="excelFile">大量轉換 請使用EXCEL上傳 (右圖範例)：</label>
+        <div class="button-container">
+            <input type="file" id="excelFile" accept=".xlsx" />
+            <img src="/excel.png" alt="excel example">
+        </div>
+        <button onclick="processExcel()">批量轉換</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="/Base_conversion.js"></script>
+
+</body>
+</html>
