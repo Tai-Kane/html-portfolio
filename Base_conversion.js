@@ -47,8 +47,8 @@
 
           // 顯示結果
           document.getElementById("result").innerHTML = `
-              <strong>倒轉後的卡號：</strong> ${reversedNum} <br>
-              <strong>轉換成10進制：</strong> ${decimalNum}
+              <strong>卡號倒轉：</strong> ${reversedNum} <br>
+              <strong>10進制卡號：</strong> ${decimalNum}
           `;
       }
 
@@ -57,7 +57,7 @@
           let file = fileInput.files[0];
       
           if (!file) {
-              document.getElementById("result").innerHTML = "請上傳EXCEL文件";
+              document.getElementById("result1").innerHTML = "請上傳EXCEL文件";
               return;
           }
       
